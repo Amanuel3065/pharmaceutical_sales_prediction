@@ -1,7 +1,7 @@
 from xxlimited import Str
 import pandas as pd
 import numpy as np
-from log_help import App_Logger
+from logger import App_Logger
 
 app_logger = App_Logger("../logs/data_cleaning.log").get_app_logger()
 

@@ -1,11 +1,19 @@
 import pandas as pd
 import numpy as np
+import os, sys
+
+sys.path.insert(0, '../logs/')
+sys.path.insert(0, '../logs/')
+sys.path.append(os.path.abspath(os.path.join('..')))
+from logger import App_Logger
 
 
-class data_preProcessing_script:
+class dataProcessor:
 
     def __init__(self, df: pd.DataFrame) -> None:
         self.df = df
+        self.logger = App_Logger(
+            "../logs/data_preProcessing.log").get_app_logger()
 
 
 ### DATA_CLEANER ###

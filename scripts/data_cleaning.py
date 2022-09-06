@@ -1,4 +1,4 @@
-from xxlimited import Str
+
 import pandas as pd
 import numpy as np
 from logger import App_Logger
@@ -6,7 +6,7 @@ from logger import App_Logger
 app_logger = App_Logger("../logs/data_cleaning.log").get_app_logger()
 
 
-class DataCleaner:
+class dataCleaner:
     def __init__(self, df: pd.DataFrame, deep=False) -> None:
         """
         Returns a DataCleaner Object with the passed DataFrame Data set as its own DataFrame
@@ -24,7 +24,7 @@ class DataCleaner:
         if(deep):
             self.df = df.copy(deep=True)
         else:
-            self.df = df
+            self.df = df 
 
     def remove_unwanted_columns(self, columns: list) -> pd.DataFrame:
         """
@@ -68,6 +68,10 @@ class DataCleaner:
             print("Failed to separate the date-time column")
 
     def separate_date_column(self, date_column: str, drop_date=True) -> pd.DataFrame:
+        
+        """
+        divides the date column in YYYY-MM-DD to separate year, month and day 
+        """
         try:
             date_index = self.df.columns.get_loc(date_column)
             self.df.insert(date_index + 1, 'Year', self.df[date_column].apply(
@@ -311,7 +315,7 @@ class DataCleaner:
         except:
             print("Cant fix outliers for each column")
 
-    def replace_outlier_with_median(self, dataFrame: pd.DataFrame, feature: Str) -> pd.DataFrame:
+    def replace_outlier_with_median(self, dataFrame: pd.DataFrame, feature: str) -> pd.DataFrame:
 
         Q1 = dataFrame[feature].quantile(0.25)
         Q3 = dataFrame[feature].quantile(0.75)

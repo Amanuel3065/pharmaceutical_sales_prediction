@@ -27,7 +27,7 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
 
-      - uses: iterative/setup-cml@V1
+      # - uses: iterative/setup-cml@V1
       - name: Train Model
         run: |
           #this is workflow

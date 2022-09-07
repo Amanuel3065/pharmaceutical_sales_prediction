@@ -31,7 +31,7 @@ jobs:
       - name: Train Model
         run: |
           #this is workflow
-          sudo pip indtall -r requirements.txt
+          sudo pip install -r requirements.txt
           sudo python train.py
       - name: CML report
         env:

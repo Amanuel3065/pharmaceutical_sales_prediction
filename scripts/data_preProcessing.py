@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import os, sys
 
-sys.path.insert(0, '../logs/')
+sys.path.insert(0, '../scripts/')
 sys.path.insert(0, '../logs/')
 sys.path.append(os.path.abspath(os.path.join('..')))
 from logger import App_Logger

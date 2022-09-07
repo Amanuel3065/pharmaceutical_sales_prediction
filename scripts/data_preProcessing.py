@@ -15,7 +15,7 @@ class dataProcessor:
     def __init__(self, df: pd.DataFrame) -> None:
         self.df = df
         self.logger = App_Logger(
-            "../logs/data_preProcessing.log").get_app_logger()
+            "logs/data_preProcessing.log").get_app_logger()
 
 
 ### DATA_CLEANER ###

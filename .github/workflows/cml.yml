@@ -32,7 +32,7 @@ jobs:
         run: |
           #this is workflow
           sudo pip install -r requirements.txt
-          sudo python train.py
+          #sudo python train.py
       - name: CML report
         env:
           REPO_TOKEN: ${{secrets.GITHUB_TOKEN}}

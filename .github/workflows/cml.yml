@@ -38,7 +38,7 @@ jobs:
           REPO_TOKEN: ${{secrets.GITHUB_TOKEN}}
         run: |
           #add the CML report as comments in PRs
-          cat results.txt >> report.md
-          cml send-comment report.md
+          #cat results.txt >> report.md
+          #cml send-comment report.md
           
       

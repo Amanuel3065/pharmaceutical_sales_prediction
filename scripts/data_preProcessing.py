@@ -1,13 +1,15 @@
 import pandas as pd
 import numpy as np
 import os, sys
+from sklearn.preprocessing import MinMaxScaler, Normalizer, StandardScaler, LabelEncoder
+from datetime import datetime
 
 sys.path.insert(0, '../scripts/')
 sys.path.insert(0, '../logs/')
 sys.path.append(os.path.abspath(os.path.join('..')))
 from logger import App_Logger
 
-app_logger = App_Logger("logs/data_preProcessing.log").get_app_logger()
+app_logger = App_Logger("../logs/data_preProcessing.log").get_app_logger()
 
 
 class dataProcessor:
@@ -15,7 +17,7 @@ class dataProcessor:
     def __init__(self, df: pd.DataFrame) -> None:
         self.df = df
         self.logger = App_Logger(
-            "logs/data_preProcessing.log").get_app_logger()
+            "../logs/data_preProcessing.log").get_app_logger()
 
 
 ### DATA_CLEANER ###
@@ -88,3 +90,122 @@ class dataProcessor:
         return missing_df
     
     
+    ## To add other features from existing features
+    
+    def add_week_day(self, day_of_week_col: str) -> pd.DataFrame:
+        try:
+            date_index = self.df.columns.get_loc(day_of_week_col)
+            self.df.insert(date_index + 1, 'WeekDay',
+                           self.df[day_of_week_col].apply(lambda x: 1 if x <= 5 else 0))
+
+            self.logger.info("Successfully Added WeekDay Column to the DataFrame")
+
+        except Exception as e:
+            self.logger.exception("Failed to Add WeekDay Column")
+            
+            
+    def add_number_of_days_to_holiday(self, state_holiday_col: str):
+        try:
+            date_index = self.df.columns.get_loc(state_holiday_col)
+
+            modified_index = self.modify_holiday_list(
+                self.df[state_holiday_col].values.tolist())
+            days_to_holiday_index = []
+            i = 0
+            last_holiday_index = 0
+            for index, value in enumerate(modified_index):
+                if(index == len(modified_index) - 1):
+                    for j in range(last_holiday_index+1, len(modified_index)):
+                        days_to_holiday_index.append(0)
+                elif(value == 'neither' or value == 'after' or value == 'before'):
+                    i += 1
+                elif(value == 'during' and i != 0):
+                    last_holiday_index = index
+                    for j in range(i):
+                        days_to_holiday_index.append(i)
+                        i = i-1
+                    days_to_holiday_index.append(0)
+                    i = 0
+                elif(value == 'during' and i == 0):
+                    days_to_holiday_index.append(i)
+                    last_holiday_index = index
+                    continue
+
+            self.df.insert(date_index + 1, 'DaysToHoliday',
+                           days_to_holiday_index)
+
+            self.logger.info("Successfully Added DaysToHoliday Column")
+
+        except Exception as e:
+            self.logger.exception("Failed to Add DaysToHoliday Column")
+
+
+    def add_number_of_days_after_holiday(self, state_holiday_col: str):
+        try:
+            date_index = self.df.columns.get_loc(state_holiday_col)
+
+            modified_index = self.modify_holiday_list(
+                self.df[state_holiday_col].values.tolist())
+
+            days_to_after_holiday_index = [0] * len(modified_index)
+            i = 0
+            last_holiday_index = modified_index.index('during')
+
+            for index, value in enumerate(modified_index):
+                if(value == 'before'):
+                    if(index > last_holiday_index):
+                        i += 1
+                        days_to_after_holiday_index[index] = i
+                    continue
+                elif(value == 'after'):
+                    i += 1
+                    days_to_after_holiday_index[index] = i
+                elif(value == 'during'):
+                    last_holiday_index = index
+                    i = 0
+                    continue
+
+            days_to_after_holiday_index.insert(0, 0)
+
+            self.df.insert(date_index + 1, 'DaysAfterHoliday',
+                           days_to_after_holiday_index[:-1])
+
+            self.logger.info("Successfully Added DaysAfterHoliday Column")
+
+        except Exception as e:
+            self.logger.exception("Failed to Add DaysAfterHoliday Column")
+            
+            
+    def add_month_timing(self, day_col: str) -> pd.DataFrame:
+        try:
+            date_index = self.df.columns.get_loc(day_col)
+            self.df.insert(date_index + 1, 'MonthTiming',
+                           self.df[day_col].apply(self.return_day_status_in_month))
+
+            self.logger.info("Successfully Added MonthTiming Column")
+
+        except Exception as e:
+            self.logger.exception("Failed to Add MonthTiming Column")
+
+    
+
+    def get_season(self, month: int):
+        if(month <= 2 or month == 12):
+            return 'Winter'
+        elif(month > 2 and month <= 5):
+            return 'Spring'
+        elif(month > 5 and month <= 8):
+            return 'Summer'
+        else:
+            return 'Autumn'
+
+    def add_season(self, month_col: str) -> pd.DataFrame:
+        try:
+            date_index = self.df.columns.get_loc(month_col)
+            self.df.insert(date_index + 1, 'Season',
+                           self.df[month_col].apply(self.get_season))
+
+            self.logger.info("Successfully Added Season Column")
+
+        except Exception as e:
+            self.logger.exception("Failed to Add Season Column")

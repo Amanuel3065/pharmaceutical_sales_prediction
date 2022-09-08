@@ -24,3 +24,210 @@
 2022-09-07 17:06:29,562 : INFO : logger : Outlier for CompetitionDistance is fixed
 2022-09-07 17:06:29,562 : INFO : logger : Outlier for CompetitionDistance is fixed
 2022-09-07 17:06:29,562 : INFO : logger : Outlier for CompetitionDistance is fixed
+2022-09-08 11:16:53,681 : INFO : logger : Outlier for Customers is fixed
+2022-09-08 11:16:53,681 : INFO : logger : Outlier for Customers is fixed
+2022-09-08 11:16:53,681 : INFO : logger : Outlier for Customers is fixed
+2022-09-08 11:16:53,802 : INFO : logger : Outlier for Sales is fixed
+2022-09-08 11:16:53,802 : INFO : logger : Outlier for Sales is fixed
+2022-09-08 11:16:53,802 : INFO : logger : Outlier for Sales is fixed
+2022-09-08 11:28:19,926 : INFO : logger : Outlier for Customers is fixed
+2022-09-08 11:28:19,926 : INFO : logger : Outlier for Customers is fixed
+2022-09-08 11:28:19,926 : INFO : logger : Outlier for Customers is fixed
+2022-09-08 11:28:20,047 : INFO : logger : Outlier for Sales is fixed
+2022-09-08 11:28:20,047 : INFO : logger : Outlier for Sales is fixed
+2022-09-08 11:28:20,047 : INFO : logger : Outlier for Sales is fixed
+2022-09-08 11:28:26,620 : INFO : logger : Successfully Added WeekDay Column to the DataFrame
+2022-09-08 11:28:26,620 : INFO : logger : Successfully Added WeekDay Column to the DataFrame
+2022-09-08 11:28:26,620 : INFO : logger : Successfully Added WeekDay Column to the DataFrame
+2022-09-08 11:28:26,621 : ERROR : logger : Failed to Add DaysToHoliday Column
+Traceback (most recent call last):
+  File "c:\Users\PC\Desktop\clone\pharmaceutical_sales_prediction\notebooks\../scripts\data_preProcessing.py", line 111, in add_number_of_days_to_holiday
+    modified_index = self.modify_holiday_list(
+AttributeError: 'dataProcessor' object has no attribute 'modify_holiday_list'
+2022-09-08 11:28:26,621 : ERROR : logger : Failed to Add DaysToHoliday Column
+Traceback (most recent call last):
+  File "c:\Users\PC\Desktop\clone\pharmaceutical_sales_prediction\notebooks\../scripts\data_preProcessing.py", line 111, in add_number_of_days_to_holiday
+    modified_index = self.modify_holiday_list(
+AttributeError: 'dataProcessor' object has no attribute 'modify_holiday_list'
+2022-09-08 11:28:26,621 : ERROR : logger : Failed to Add DaysToHoliday Column
+Traceback (most recent call last):
+  File "c:\Users\PC\Desktop\clone\pharmaceutical_sales_prediction\notebooks\../scripts\data_preProcessing.py", line 111, in add_number_of_days_to_holiday
+    modified_index = self.modify_holiday_list(
+AttributeError: 'dataProcessor' object has no attribute 'modify_holiday_list'
+2022-09-08 11:28:26,622 : ERROR : logger : Failed to Add DaysAfterHoliday Column
+Traceback (most recent call last):
+  File "c:\Users\PC\Desktop\clone\pharmaceutical_sales_prediction\notebooks\../scripts\data_preProcessing.py", line 147, in add_number_of_days_after_holiday
+    modified_index = self.modify_holiday_list(
+AttributeError: 'dataProcessor' object has no attribute 'modify_holiday_list'
+2022-09-08 11:28:26,622 : ERROR : logger : Failed to Add DaysAfterHoliday Column
+Traceback (most recent call last):
+  File "c:\Users\PC\Desktop\clone\pharmaceutical_sales_prediction\notebooks\../scripts\data_preProcessing.py", line 147, in add_number_of_days_after_holiday
+    modified_index = self.modify_holiday_list(
+AttributeError: 'dataProcessor' object has no attribute 'modify_holiday_list'
+2022-09-08 11:28:26,622 : ERROR : logger : Failed to Add DaysAfterHoliday Column
+Traceback (most recent call last):
+  File "c:\Users\PC\Desktop\clone\pharmaceutical_sales_prediction\notebooks\../scripts\data_preProcessing.py", line 147, in add_number_of_days_after_holiday
+    modified_index = self.modify_holiday_list(
+AttributeError: 'dataProcessor' object has no attribute 'modify_holiday_list'
+2022-09-08 11:28:26,623 : ERROR : logger : Failed to Add MonthTiming Column
+Traceback (most recent call last):
+  File "c:\Users\PC\Desktop\clone\pharmaceutical_sales_prediction\notebooks\../scripts\data_preProcessing.py", line 183, in add_month_timing
+    self.df[day_col].apply(self.return_day_status_in_month))
+AttributeError: 'dataProcessor' object has no attribute 'return_day_status_in_month'
+2022-09-08 11:28:26,623 : ERROR : logger : Failed to Add MonthTiming Column
+Traceback (most recent call last):
+  File "c:\Users\PC\Desktop\clone\pharmaceutical_sales_prediction\notebooks\../scripts\data_preProcessing.py", line 183, in add_month_timing
+    self.df[day_col].apply(self.return_day_status_in_month))
+AttributeError: 'dataProcessor' object has no attribute 'return_day_status_in_month'
+2022-09-08 11:28:26,623 : ERROR : logger : Failed to Add MonthTiming Column
+Traceback (most recent call last):
+  File "c:\Users\PC\Desktop\clone\pharmaceutical_sales_prediction\notebooks\../scripts\data_preProcessing.py", line 183, in add_month_timing
+    self.df[day_col].apply(self.return_day_status_in_month))
+AttributeError: 'dataProcessor' object has no attribute 'return_day_status_in_month'
+2022-09-08 11:35:50,947 : INFO : logger : Outlier for Customers is fixed
+2022-09-08 11:35:50,947 : INFO : logger : Outlier for Customers is fixed
+2022-09-08 11:35:50,947 : INFO : logger : Outlier for Customers is fixed
+2022-09-08 11:35:50,947 : INFO : logger : Outlier for Customers is fixed
+2022-09-08 11:35:50,947 : INFO : logger : Outlier for Customers is fixed
+2022-09-08 11:35:51,072 : INFO : logger : Outlier for Sales is fixed
+2022-09-08 11:35:51,072 : INFO : logger : Outlier for Sales is fixed
+2022-09-08 11:35:51,072 : INFO : logger : Outlier for Sales is fixed
+2022-09-08 11:35:51,072 : INFO : logger : Outlier for Sales is fixed
+2022-09-08 11:35:51,072 : INFO : logger : Outlier for Sales is fixed
+2022-09-08 11:35:52,745 : INFO : logger : Successfully Added WeekDay Column to the DataFrame
+2022-09-08 11:35:52,745 : INFO : logger : Successfully Added WeekDay Column to the DataFrame
+2022-09-08 11:35:52,745 : INFO : logger : Successfully Added WeekDay Column to the DataFrame
+2022-09-08 11:35:52,745 : INFO : logger : Successfully Added WeekDay Column to the DataFrame
+2022-09-08 11:35:52,745 : INFO : logger : Successfully Added WeekDay Column to the DataFrame
+2022-09-08 11:35:52,747 : ERROR : logger : Failed to Add DaysToHoliday Column
+Traceback (most recent call last):
+  File "c:\Users\PC\Desktop\clone\pharmaceutical_sales_prediction\notebooks\../scripts\data_preProcessing.py", line 111, in add_number_of_days_to_holiday
+    modified_index = self.modify_holiday_list(
+AttributeError: 'dataProcessor' object has no attribute 'modify_holiday_list'
+2022-09-08 11:35:52,747 : ERROR : logger : Failed to Add DaysToHoliday Column
+Traceback (most recent call last):
+  File "c:\Users\PC\Desktop\clone\pharmaceutical_sales_prediction\notebooks\../scripts\data_preProcessing.py", line 111, in add_number_of_days_to_holiday
+    modified_index = self.modify_holiday_list(
+AttributeError: 'dataProcessor' object has no attribute 'modify_holiday_list'
+2022-09-08 11:35:52,747 : ERROR : logger : Failed to Add DaysToHoliday Column
+Traceback (most recent call last):
+  File "c:\Users\PC\Desktop\clone\pharmaceutical_sales_prediction\notebooks\../scripts\data_preProcessing.py", line 111, in add_number_of_days_to_holiday
+    modified_index = self.modify_holiday_list(
+AttributeError: 'dataProcessor' object has no attribute 'modify_holiday_list'
+2022-09-08 11:35:52,747 : ERROR : logger : Failed to Add DaysToHoliday Column
+Traceback (most recent call last):
+  File "c:\Users\PC\Desktop\clone\pharmaceutical_sales_prediction\notebooks\../scripts\data_preProcessing.py", line 111, in add_number_of_days_to_holiday
+    modified_index = self.modify_holiday_list(
+AttributeError: 'dataProcessor' object has no attribute 'modify_holiday_list'
+2022-09-08 11:35:52,747 : ERROR : logger : Failed to Add DaysToHoliday Column
+Traceback (most recent call last):
+  File "c:\Users\PC\Desktop\clone\pharmaceutical_sales_prediction\notebooks\../scripts\data_preProcessing.py", line 111, in add_number_of_days_to_holiday
+    modified_index = self.modify_holiday_list(
+AttributeError: 'dataProcessor' object has no attribute 'modify_holiday_list'
+2022-09-08 11:35:52,752 : ERROR : logger : Failed to Add DaysAfterHoliday Column
+Traceback (most recent call last):
+  File "c:\Users\PC\Desktop\clone\pharmaceutical_sales_prediction\notebooks\../scripts\data_preProcessing.py", line 147, in add_number_of_days_after_holiday
+    modified_index = self.modify_holiday_list(
+AttributeError: 'dataProcessor' object has no attribute 'modify_holiday_list'
+2022-09-08 11:35:52,752 : ERROR : logger : Failed to Add DaysAfterHoliday Column
+Traceback (most recent call last):
+  File "c:\Users\PC\Desktop\clone\pharmaceutical_sales_prediction\notebooks\../scripts\data_preProcessing.py", line 147, in add_number_of_days_after_holiday
+    modified_index = self.modify_holiday_list(
+AttributeError: 'dataProcessor' object has no attribute 'modify_holiday_list'
+2022-09-08 11:35:52,752 : ERROR : logger : Failed to Add DaysAfterHoliday Column
+Traceback (most recent call last):
+  File "c:\Users\PC\Desktop\clone\pharmaceutical_sales_prediction\notebooks\../scripts\data_preProcessing.py", line 147, in add_number_of_days_after_holiday
+    modified_index = self.modify_holiday_list(
+AttributeError: 'dataProcessor' object has no attribute 'modify_holiday_list'
+2022-09-08 11:35:52,752 : ERROR : logger : Failed to Add DaysAfterHoliday Column
+Traceback (most recent call last):
+  File "c:\Users\PC\Desktop\clone\pharmaceutical_sales_prediction\notebooks\../scripts\data_preProcessing.py", line 147, in add_number_of_days_after_holiday
+    modified_index = self.modify_holiday_list(
+AttributeError: 'dataProcessor' object has no attribute 'modify_holiday_list'
+2022-09-08 11:35:52,752 : ERROR : logger : Failed to Add DaysAfterHoliday Column
+Traceback (most recent call last):
+  File "c:\Users\PC\Desktop\clone\pharmaceutical_sales_prediction\notebooks\../scripts\data_preProcessing.py", line 147, in add_number_of_days_after_holiday
+    modified_index = self.modify_holiday_list(
+AttributeError: 'dataProcessor' object has no attribute 'modify_holiday_list'
+2022-09-08 11:35:52,754 : ERROR : logger : Failed to Add MonthTiming Column
+Traceback (most recent call last):
+  File "c:\Users\PC\Desktop\clone\pharmaceutical_sales_prediction\notebooks\../scripts\data_preProcessing.py", line 183, in add_month_timing
+    self.df[day_col].apply(self.return_day_status_in_month))
+AttributeError: 'dataProcessor' object has no attribute 'return_day_status_in_month'
+2022-09-08 11:35:52,754 : ERROR : logger : Failed to Add MonthTiming Column
+Traceback (most recent call last):
+  File "c:\Users\PC\Desktop\clone\pharmaceutical_sales_prediction\notebooks\../scripts\data_preProcessing.py", line 183, in add_month_timing
+    self.df[day_col].apply(self.return_day_status_in_month))
+AttributeError: 'dataProcessor' object has no attribute 'return_day_status_in_month'
+2022-09-08 11:35:52,754 : ERROR : logger : Failed to Add MonthTiming Column
+Traceback (most recent call last):
+  File "c:\Users\PC\Desktop\clone\pharmaceutical_sales_prediction\notebooks\../scripts\data_preProcessing.py", line 183, in add_month_timing
+    self.df[day_col].apply(self.return_day_status_in_month))
+AttributeError: 'dataProcessor' object has no attribute 'return_day_status_in_month'
+2022-09-08 11:35:52,754 : ERROR : logger : Failed to Add MonthTiming Column
+Traceback (most recent call last):
+  File "c:\Users\PC\Desktop\clone\pharmaceutical_sales_prediction\notebooks\../scripts\data_preProcessing.py", line 183, in add_month_timing
+    self.df[day_col].apply(self.return_day_status_in_month))
+AttributeError: 'dataProcessor' object has no attribute 'return_day_status_in_month'
+2022-09-08 11:35:52,754 : ERROR : logger : Failed to Add MonthTiming Column
+Traceback (most recent call last):
+  File "c:\Users\PC\Desktop\clone\pharmaceutical_sales_prediction\notebooks\../scripts\data_preProcessing.py", line 183, in add_month_timing
+    self.df[day_col].apply(self.return_day_status_in_month))
+AttributeError: 'dataProcessor' object has no attribute 'return_day_status_in_month'
+2022-09-08 11:44:10,539 : INFO : logger : Outlier for Customers is fixed
+2022-09-08 11:44:10,539 : INFO : logger : Outlier for Customers is fixed
+2022-09-08 11:44:10,539 : INFO : logger : Outlier for Customers is fixed
+2022-09-08 11:44:10,709 : INFO : logger : Outlier for Sales is fixed
+2022-09-08 11:44:10,709 : INFO : logger : Outlier for Sales is fixed
+2022-09-08 11:44:10,709 : INFO : logger : Outlier for Sales is fixed
+2022-09-08 11:44:14,348 : INFO : logger : Successfully Added WeekDay Column to the DataFrame
+2022-09-08 11:44:14,348 : INFO : logger : Successfully Added WeekDay Column to the DataFrame
+2022-09-08 11:44:14,348 : INFO : logger : Successfully Added WeekDay Column to the DataFrame
+2022-09-08 11:44:14,348 : ERROR : logger : Failed to Add DaysToHoliday Column
+Traceback (most recent call last):
+  File "c:\Users\PC\Desktop\clone\pharmaceutical_sales_prediction\notebooks\../scripts\data_preProcessing.py", line 111, in add_number_of_days_to_holiday
+    modified_index = self.modify_holiday_list(
+AttributeError: 'dataProcessor' object has no attribute 'modify_holiday_list'
+2022-09-08 11:44:14,348 : ERROR : logger : Failed to Add DaysToHoliday Column
+Traceback (most recent call last):
+  File "c:\Users\PC\Desktop\clone\pharmaceutical_sales_prediction\notebooks\../scripts\data_preProcessing.py", line 111, in add_number_of_days_to_holiday
+    modified_index = self.modify_holiday_list(
+AttributeError: 'dataProcessor' object has no attribute 'modify_holiday_list'
+2022-09-08 11:44:14,348 : ERROR : logger : Failed to Add DaysToHoliday Column
+Traceback (most recent call last):
+  File "c:\Users\PC\Desktop\clone\pharmaceutical_sales_prediction\notebooks\../scripts\data_preProcessing.py", line 111, in add_number_of_days_to_holiday
+    modified_index = self.modify_holiday_list(
+AttributeError: 'dataProcessor' object has no attribute 'modify_holiday_list'
+2022-09-08 11:44:14,349 : ERROR : logger : Failed to Add DaysAfterHoliday Column
+Traceback (most recent call last):
+  File "c:\Users\PC\Desktop\clone\pharmaceutical_sales_prediction\notebooks\../scripts\data_preProcessing.py", line 147, in add_number_of_days_after_holiday
+    modified_index = self.modify_holiday_list(
+AttributeError: 'dataProcessor' object has no attribute 'modify_holiday_list'
+2022-09-08 11:44:14,349 : ERROR : logger : Failed to Add DaysAfterHoliday Column
+Traceback (most recent call last):
+  File "c:\Users\PC\Desktop\clone\pharmaceutical_sales_prediction\notebooks\../scripts\data_preProcessing.py", line 147, in add_number_of_days_after_holiday
+    modified_index = self.modify_holiday_list(
+AttributeError: 'dataProcessor' object has no attribute 'modify_holiday_list'
+2022-09-08 11:44:14,349 : ERROR : logger : Failed to Add DaysAfterHoliday Column
+Traceback (most recent call last):
+  File "c:\Users\PC\Desktop\clone\pharmaceutical_sales_prediction\notebooks\../scripts\data_preProcessing.py", line 147, in add_number_of_days_after_holiday
+    modified_index = self.modify_holiday_list(
+AttributeError: 'dataProcessor' object has no attribute 'modify_holiday_list'
+2022-09-08 11:44:14,350 : ERROR : logger : Failed to Add MonthTiming Column
+Traceback (most recent call last):
+  File "c:\Users\PC\Desktop\clone\pharmaceutical_sales_prediction\notebooks\../scripts\data_preProcessing.py", line 183, in add_month_timing
+    self.df[day_col].apply(self.return_day_status_in_month))
+AttributeError: 'dataProcessor' object has no attribute 'return_day_status_in_month'
+2022-09-08 11:44:14,350 : ERROR : logger : Failed to Add MonthTiming Column
+Traceback (most recent call last):
+  File "c:\Users\PC\Desktop\clone\pharmaceutical_sales_prediction\notebooks\../scripts\data_preProcessing.py", line 183, in add_month_timing
+    self.df[day_col].apply(self.return_day_status_in_month))
+AttributeError: 'dataProcessor' object has no attribute 'return_day_status_in_month'
+2022-09-08 11:44:14,350 : ERROR : logger : Failed to Add MonthTiming Column
+Traceback (most recent call last):
+  File "c:\Users\PC\Desktop\clone\pharmaceutical_sales_prediction\notebooks\../scripts\data_preProcessing.py", line 183, in add_month_timing
+    self.df[day_col].apply(self.return_day_status_in_month))
+AttributeError: 'dataProcessor' object has no attribute 'return_day_status_in_month'
+2022-09-08 11:44:32,375 : INFO : logger : Successfully Added Season Column
+2022-09-08 11:44:32,375 : INFO : logger : Successfully Added Season Column
+2022-09-08 11:44:32,375 : INFO : logger : Successfully Added Season Column

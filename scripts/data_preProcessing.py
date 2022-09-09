@@ -9,7 +9,7 @@ sys.path.insert(0, '../logs/')
 sys.path.append(os.path.abspath(os.path.join('..')))
 from logger import App_Logger
 
-app_logger = App_Logger("../logs/data_preProcessing.log").get_app_logger()
+app_logger = App_Logger("logs/data_preProcessing.log").get_app_logger()
 
 
 class dataProcessor:
@@ -17,7 +17,7 @@ class dataProcessor:
     def __init__(self, df: pd.DataFrame) -> None:
         self.df = df
         self.logger = App_Logger(
-            "../logs/data_preProcessing.log").get_app_logger()
+            "logs/data_preProcessing.log").get_app_logger()
 
 
 ### DATA_CLEANER ###
@@ -209,3 +209,54 @@ class dataProcessor:
 
         except Exception as e:
             self.logger.exception("Failed to Add Season Column")
+
+
+    def label_columns(self, columns: list) -> dict:
+        labelers = {}
+        try:
+            for col in columns:
+                le = LabelEncoder()
+                le_fitted = le.fit(self.df[col].values)
+                self.df[col] = le_fitted.transform(self.df[col].values)
+                labelers[col] = le_fitted
+
+            return labelers
+
+        except Exception as e:
+            print("Failed to Label Encode columns")
+            
+            
+    def standardize_column(self, column: str) -> pd.DataFrame:
+        """
+            Returns the objects DataFrames column normalized using Normalizer
+            Parameters
+            ----------
+            column:
+                Type: str
+            length:
+                Type: int
+
+            Returns
+            -------
+            pd.DataFrame
+        """
+        try:
+            std_column_df = pd.DataFrame(self.df[column])
+            std_column_values = std_column_df.values
+            standardizer = StandardScaler()
+            normalized_data = standardizer.fit_transform(std_column_values)
+            self.df[column] = normalized_data
+
+            return self.df
+        except:
+            print("Failed to standardize the column")
+            
+            
+    def standardize_columns(self, columns: list) -> pd.DataFrame:
+        try:
+            for col in columns:
+                self.df = self.standardize_column(col)
+
+            return self.df
+        except:
+            print(f"Failed to standardize {col} column")

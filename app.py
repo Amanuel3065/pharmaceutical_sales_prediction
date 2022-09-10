@@ -17,7 +17,7 @@ st.sidebar.markdown("""
 # Rossmann Sales Predictions
 """)
 
-with open('./scripts/css/styles.css') as f:
+with open('./scripts/Css/styles.css') as f:
     st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 # Add all your application here

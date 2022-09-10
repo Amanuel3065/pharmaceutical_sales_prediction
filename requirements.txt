@@ -14,8 +14,4 @@ dvc
 #plotly.graph_objects
 #plotly.subplots
 sklearn==0.0
-<<<<<<< HEAD
 streamlit
-=======
-
->>>>>>> b7a82179512c7345e2a6ac6b8beaa56a2e86a8f3

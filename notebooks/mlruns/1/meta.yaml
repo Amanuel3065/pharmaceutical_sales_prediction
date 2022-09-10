@@ -1,0 +1,4 @@
+artifact_location: file:///C:/Users/PC/Desktop/clone/pharmaceutical_sales_prediction/notebooks/mlruns/1
+experiment_id: '1'
+lifecycle_stage: active
+name: Rossman-Lstm_model

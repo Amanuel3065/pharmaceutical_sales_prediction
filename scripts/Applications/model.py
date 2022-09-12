@@ -1,6 +1,5 @@
 from numpy.core.records import array
 import streamlit as st
-from joblib import load
 import numpy as np
 import sys
 import pickle
@@ -8,7 +7,7 @@ import pickle
 def app():
 
     # Load Saved Results Data
-    model = pickle.load(filename='models/10-09-2022-01-13-01-52.92%.pkl')
+    model = pickle.load(open('models/10-09-2022-01-13-01-52.92%.pkl', 'rb'))
 
     st.title("Satisfaction Model")
 

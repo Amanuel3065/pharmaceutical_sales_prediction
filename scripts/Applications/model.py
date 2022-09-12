@@ -9,7 +9,7 @@ def app():
     # Load Saved Results Data
     model = pickle.load(open('models/10-09-2022-01-13-01-52.92%.pkl', 'rb'))
 
-    st.title("Predicion")
+    st.title("Prediction")
 
     st.header("To calculate a sales prediction, enter values below.")
 
@@ -25,7 +25,7 @@ def app():
         """, total_data,
                  total_retransmission, average_delay, total_throughput]"""
         val = model.predict([array])
-        satisfaction = [i[0] for i in val][0]
+        sales = [i[0] for i in val][0]
         st.write(
-            "The user's estimated satisfaction score is: {:.3f}".format(satisfaction))
+            "The predicted sales is: {:.3f}".format(sales))
 

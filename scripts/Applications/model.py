@@ -1,3 +1,4 @@
+from tkinter.filedialog import Open
 from numpy.core.records import array
 import streamlit as st
 import numpy as np
@@ -13,7 +14,7 @@ def app():
 
     st.header("To calculate a sales prediction, enter values below.")
 
-    Customers = st.number_input('Enter customers', key='a')
+    Open = st.number_input('Is open?', key='a')
     Promo = st.number_input('Promoted?', key='b')
     #total_data = st.number_input('Enter total data', key='c')
     #total_retransmission = st.number_input('Enter tcp retransmission', key='d')
@@ -21,11 +22,13 @@ def app():
     #total_throughput = st.number_input('Enter average throughput', key='f')
 
     if st.button('Sales prediction'):
-        array = [Customers, Promo]
+        array = [Open, Promo]
         """, total_data,
                  total_retransmission, average_delay, total_throughput]"""
         val = model.predict([array])
         sales = [i[0] for i in val][0]
         st.write(
             "The predicted sales is: {:.3f}".format(sales))
+
+
 

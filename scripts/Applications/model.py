@@ -1,4 +1,4 @@
-from tkinter.filedialog import Open
+
 from numpy.core.records import array
 import streamlit as st
 import numpy as np

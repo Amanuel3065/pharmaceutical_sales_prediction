@@ -4,6 +4,7 @@ import streamlit as st
 import numpy as np
 import sys
 import pickle
+from sklearn import *
 
 def app():
 
